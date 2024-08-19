@@ -1,0 +1,17 @@
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.10);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.20);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.30);
+  }
+
+
+}
