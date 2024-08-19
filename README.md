@@ -47,3 +47,11 @@ Also, you can look at this project here: <link>https://react-tiptap-custom-edito
   <li>Tables</li>
   <li>Mathematics</li>
 </ul>
+
+## Useful links
+<ul>
+  <li>Vite: https://vitejs.dev</li>
+  <li>Titap Docs: https://tiptap.dev/docs</li>
+</ul>
+
+
