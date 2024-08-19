@@ -5,7 +5,7 @@ This project is built with React and Typescript. I use powerful rich text editor
 ## How to run the project?
 
 Type <code>npm install</code> to download all needed packages. After that - <code>npm run dev</code> to run the project.
-Also, you can look at this project here: <link>https://react-tiptap-custom-editor-55xer655d.vercel.app/</link>.
+Also, you can look at this project on Vercel.
 
 ## Key features
 <ul>
