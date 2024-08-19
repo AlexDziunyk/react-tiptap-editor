@@ -10,38 +10,18 @@ const TextEditor = () => {
     content: "<p>Hello World! 🌎️</p>",
   });
 
-  const handleGetJson = (data: JSONContent) => {
-    const fileName = "json-file";
+  const handleGetFile = (type: "json" | "html", data: string | JSONContent) => {
+    const fileName = `${type}-file`;
     const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
+    const blob = new Blob([json], { type: `application/${type}` });
     const href = URL.createObjectURL(blob);
 
-    // create "a" HTLM element with href to file
     const link = document.createElement("a");
     link.href = href;
-    link.download = fileName + ".json";
+    link.download = fileName + `.${type}`;
     document.body.appendChild(link);
     link.click();
 
-    // clean up "a" element & remove ObjectURL
-    document.body.removeChild(link);
-    URL.revokeObjectURL(href);
-  };
-
-  const handleGetHtml = (data: string) => {
-    const fileName = "html-file";
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: "application/html" });
-    const href = URL.createObjectURL(blob);
-
-    // create "a" HTLM element with href to file
-    const link = document.createElement("a");
-    link.href = href;
-    link.download = fileName + ".html";
-    document.body.appendChild(link);
-    link.click();
-
-    // clean up "a" element & remove ObjectURL
     document.body.removeChild(link);
     URL.revokeObjectURL(href);
   };
@@ -55,7 +35,7 @@ const TextEditor = () => {
           text="Get HTML"
           onClick={() => {
             if (editor) {
-              handleGetHtml(editor.getHTML());
+              handleGetFile("html", editor.getHTML());
             }
           }}
         />
@@ -63,7 +43,7 @@ const TextEditor = () => {
           text="Get JSON"
           onClick={() => {
             if (editor) {
-              handleGetJson(editor.getJSON());
+              handleGetFile("json", editor.getJSON());
             }
           }}
         />
