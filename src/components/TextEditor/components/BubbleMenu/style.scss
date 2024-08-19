@@ -1,0 +1,123 @@
+.bubble-menu__wrapper {
+  position: relative;
+}
+
+
+.bubble-menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 16px 24px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 6px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: white;
+  padding: 4px;
+
+  .bubble-icon-item {
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    background: none;
+
+    &.active,
+    &:hover {
+      background-color: rgba(173, 173, 173, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(173, 173, 173, 0.5);
+    }
+  }
+}
+
+
+.bubble-select-list {
+  z-index: 3;
+  top: 40px;
+  position: absolute;
+  box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+
+  .link__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .link__button_save {
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: none;
+      padding: 4px 6px;
+    }
+  }
+
+  .color__wrapper,
+  .text__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+    .section__title {
+      color: rgba(55, 53, 47, 0.65);
+      font-size: 14px;
+    }
+
+    .colors__col {
+      margin-top: 6px;
+      margin-bottom: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .text-color-item {
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.082);
+      }
+
+      .value__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        p {
+          margin: 0;
+        }
+
+        .letter__wrapper {
+          font-weight: 700;
+          padding: 0 6px;
+          border-radius: 4px;
+          border: 1px solid rgba(0, 0, 0, 0.089);
+        }
+      }
+    }
+  }
+}
+
+.bubble-icon-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

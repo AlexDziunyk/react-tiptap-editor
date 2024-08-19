@@ -1,0 +1,15 @@
+.input__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  border-radius: 4px;
+  padding: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  input {
+    font-family: "Work Sans";
+    outline: none;
+    border: none;
+  }
+}
