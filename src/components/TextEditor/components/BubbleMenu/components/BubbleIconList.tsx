@@ -1,4 +1,3 @@
-import React from "react";
 import { IconType } from "react-icons";
 import { IoIosArrowDown } from "react-icons/io";
 
